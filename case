@@ -1,6 +1,8 @@
+COURSE : DATABASE SYSTEM
+
 cArDorm shop Back End MySQL
 
-	cArDorm is a car shop that sells the best car to drive managed by Andro. Andro manage all of activities that belongs to cArDorm like selling a car to customer and purchasing a car with vendor.
+cArDorm is a car shop that sells the best car to drive managed by Andro. Andro manage all of activities that belongs to cArDorm like selling a car to customer and purchasing a car with vendor.
 
 	Every staff that hired by cArDorm have a task to serve a customer who wants to buy a car and purchase a car from vendor. Every staff must be following the procedures to become a staff, which are:
 •	Every staff hired must have a personal information like name, gender, email, phone number, address, and salary. Every staff has an identification number with the following format:
