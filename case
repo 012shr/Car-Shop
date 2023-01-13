@@ -1,0 +1,85 @@
+cArDorm shop Back End MySQL
+
+	cArDorm is a car shop that sells the best car to drive managed by Andro. Andro manage all of activities that belongs to cArDorm like selling a car to customer and purchasing a car with vendor.
+
+	Every staff that hired by cArDorm have a task to serve a customer who wants to buy a car and purchase a car from vendor. Every staff must be following the procedures to become a staff, which are:
+•	Every staff hired must have a personal information like name, gender, email, phone number, address, and salary. Every staff has an identification number with the following format:
+ 
+•	Staff can purchase one or many cars with a vendor.
+•	Every purchase made with the vendor have all the information about staff, vendor, purchase date, cars purchased, and the quantity of each car. Every purchase has an identification number with the following format:
+ 
+•	Every car purchased from vendor have its own information like brand, name, price, stock. Every car has an identification number with the following format:
+ 
+•	Every car brand has information about the name. Every car brand has an identification number with the following format:
+•	Staff can also serve a customer who wants to buy one or many cars.
+•	Every transaction made by the customer have all the information about staff, customer, transaction date, car sold, and the quantity of each car. Every transaction has an identification number with the following format:
+
+Every customer that wants to buy car at cArDorm must be following the transaction procedures, those are:
+•	Every customer that wants to purchase a product must already completed personal information like name, gender, address, phone number, and email. Every customer has an identification number with the following format:
+ 
+•	Customer can purchase more than one product in every transaction.
+
+Every vendor that wants to sell their car must be following the purchase procedures, those are:
+•	Every supplier that wants to sell their ingredient must already completed personal information like name, email, phone number, and address. Every vendor has an identification number with the following format:
+ 
+•	Vendor can sell more than one ingredient in every transaction.
+
+Notes:
+•	Staff gender must be either “Male” or “Female” (without quote).
+•	Staff email must ends with “@gmail.com” or “@yahoo.com” (without quote).
+•	Staff salary must be between 5000000 and 10000000.
+•	Vendor email must ends with “@gmail.com” or “@yahoo.com” (without quote).
+•	Purchase date must be lower or equals to current time.
+•	Customer name must be more than 2 characters.
+•	Customer gender must be either “Male” or “Female” (without quote).
+•	Customer email must ends with “@gmail.com” or “@yahoo.com” (without quote).
+•	Transaction date must be lower or equals to current time.
+•	All data must not be null.
+
+Now cArDorm still using manual management system to maintain the transaction and purchase. You as his precious friend wants to help cArDorm to create a database system that can store data and maintain the transaction and purchase. The tasks that you must do are:
+a.	Create Entity Relationship Diagram to maintain transaction and purchase.
+b.	Create a database system using DDL syntax that relevant with transaction and purchase.
+c.	Create query using DML syntax to fill the tables in database systems with data based on the following conditions:
+•	Master table must be filled with more than or equals 10 data.
+•	Transaction table must be filled with more than or equals 15 data.
+•	Transaction detail table must be filled with more than or equals 25 data.
+•	For the Car Brand table, the table must be filled with the following data:
+Car Brand Names
+Tayato	Chovrelot
+Dihatsu	Vilvi
+Nassin	Masdah
+Mutsibushu	Kai
+Uadi	Luxes
+
+d.	Create query using DML syntax to simulate the transactions process for transaction and purchase. 
+Note: DML syntax to fill database and DML syntax to simulate the transactions process should be a different query.
+e.	To support database management process in cArDorm, Andro asked you to provide some query that resulting important data. The requirements that asked from him are:
+
+1.	Display CustomerName (obtained from the CustomerName starts with ‘Mrs. ’), CustomerGender (obtained from the CustomerGender with uppercase format), and Total Transaction (obtained from the count of transaction that have been done by customer) for each customer name contains two words and customer gender is ‘Female’
+
+2.	Display CarId, CarName, CarBrandName, CarPrice, and Total of Car That Has Been Sold (obtained from the sum of quantity from the transaction that has been done by customer and ends with ‘ Car(s)’) for each CarPrice more than 300000000, three last characters from CarId is odd, and Total of Car That Has Been Sold more than 1.
+
+3.	Display StaffId (obtained from the StaffId by replacing ‘ST’ with ‘Staff ’), StaffName, Total Transaction Handled (obtained from the count of transaction that has been handled by staff), and Maximum Quantity in One Transaction (obtained from the max of car quantity in one transaction that has been handled by staff) for every transaction made in ‘April’, Staff Name consists of two words, Total Transaction Handled more than 1 and descending sort by Maximum Purchases in One Transaction.
+
+4.	Display CustomerName, CustomerGender (obtained from the first character of CustomerGender), Total Purchase (obtained from the count of transaction that has been done by customer), and Total of Car That Has Been Purchased (obtained from the sum of car quantity in transaction that has been done by customer) for every customer email ends with ‘@gmail.com’ and Total of Car That Has Been Purchased more than 2.
+
+5.	Display VendorName (obtained from the VendorName by replacing ‘PT’ with ‘Perseroan Trebatas’), VendorPhoneNumber, Purchase ID Number (obtained from the three last characters from PurchaseId), and Quantity for every Quantity more than average of the Quantity in transaction that has been handled by vendor and VendorName contains ‘a’.
+(alias subquery)
+
+6.	Display Name (obtained from the CarBrandName and CarName in uppercase format with space between them), Price (obtained from the CarPrice starts with ‘Rp. ’), and Stock (obtained from the CarStock starts with ‘ Stock(s)’) for every CarPrice more than average of the CarPrice and CarName contains ‘e’.
+(alias subquery)
+
+
+7.	Display Car ID Number (obtained from the three last characters from CarId), CarName, Brand (obtained from the CarBranName in uppercase format), Price (obtained from the CarPrice starts with ‘Rp. ’), and Total of Car That Has Been Sold (obtained from the sum of car quantity purchased for each car brand name and car name) for every CarPrice more than 200000000 , CarName contains ‘o’, and Total of Car That Has Been Sold more than average of the sum of car quantity purchased for each car brand name and car name.
+(alias subquery)
+
+8.	Display Staff First Name (obtained from the first word in StaffName), Staff Last Name (obtained from the last word of Staff Name), and Total of Car That Has Been Sold (obtained from the sum of car quantity sold for each transaction) for every StaffName contains two words and Total of Car That Has Been Sold more than average of the sum of car quantity sold for all transaction.
+(alias subquery)
+
+9.	Create a view named ‘Vendor_Transaction_Handled_and_Minimum_View’ to display Vendor ID (obtained from the VendorId by replacing ‘VE’ with ‘Vendor ’), VendorName, Total Transaction Handled (obtained from the count of purchase that has been handled by vendor), and Minimum Purchases in One Transaction (obtained from the minimum of quantity in one purchase that has been handled by vendor) for every PurchaseDate made in ‘May’ and VendorName contains ‘a’.
+
+10.	Create a view named ‘Staff_Total_Purchase_and_Max_Car_Purchase_View’ to display StaffID, StaffName, StaffEmail (obtained from the StaffEmail in uppercase format), Total Purchase (obtained from the count of purchase that has been done by staff), and Maximum of Car That Has Been Purchased in One Purchase (obtained from the max of car quantity in purchase that has been done by staff), for every StaffEmail ends with ‘@yahoo.com’ and StaffGender is ‘Female’.
+
+
+
+
